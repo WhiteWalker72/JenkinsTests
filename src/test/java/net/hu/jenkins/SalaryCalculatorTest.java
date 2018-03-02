@@ -33,7 +33,6 @@ class SalaryCalculatorTest {
         double expectedBonusMoney = salary / 10;
         assertEquals(expectedBonusMoney, salaryCalculator.getSalaryBonus());
 
-        
         double expectedTotalMoney = salary + expectedInsuranceMoney + expectedBonusMoney;
         assertEquals(expectedTotalMoney, salaryCalculator.getTotalSalary());
     }
