@@ -7,9 +7,11 @@ pipeline {
     
   }
   stages {
-    stage('Build') {
+    stage('Initialize') {
       steps {
-        bat 'mvn -B -DskipTests clean package'
+        sh '''echo PATH = ${PATH}
+echo M2_HOME = ${M2_HOME}
+mvn clean'''
       }
     }
   }
